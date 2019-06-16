@@ -1,0 +1,30 @@
+
+<div class="container">
+<form class="form" (submit)="add(taskTitle.value); taskTitle.value=''">
+  <div class="form-group">
+      <input #taskTitle type="text" class="form-control" placeholder="Task Name">
+  </div>
+    <input type="submit" value="SUBMIT" class="btn btn-sucess btn-lg btn-block">
+
+</form>   
+
+
+<table id="datatable" class="table table-striped">
+    <thead>
+      <tr>
+       <th style="text-align:center">ID</th> 
+       <th style="text-align:center">Title</th>
+      </tr>
+   </thead>
+ 
+   <tbody>
+     <tr *ngFor="let task of tasks">
+       <td style="text-align:center">{{ task.id }}</td> 
+       <td style="text-align:center">{{ task.title }}</td>
+     </tr>
+ 
+ 
+   </tbody>
+   </table>
+
+   </div>

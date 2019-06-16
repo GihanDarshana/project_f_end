@@ -1,0 +1,26 @@
+<div class="container">
+<h1 class="mb-3 font-weight-normal">Images</h1>
+  <table class="table table-striped">
+        <thead>
+          <tr>
+           <th style="text-align:center">ID</th>  
+           <th style="text-align:center">Caption</th>
+           <th style="text-align:center">Image</th>
+           <th style="text-align: center">Download</th>
+          </tr>
+       </thead>
+     
+       <tbody>
+         <tr *ngFor="let images of images">
+           <td style="text-align:center">{{ images.id }}</td> 
+           <td style="text-align:center">{{ images.ImageCaption }}</td>
+           <td style="text-align:center"> <img src="{{ images.Image }}" 
+            alt="Cheetah!"  style="width: 150px;height: 150px"/> </td>
+            <td><button (click)="downloadImage(images.id)" type="button" class="btn btn-sm btn-info btn-action" tooltip="Download Image" placement="left" container="body"><i class="fa fa-download" aria-hidden="true"></i>Download</button></td>
+          </tr>
+     
+     
+       </tbody>
+       </table> 
+
+</div>
